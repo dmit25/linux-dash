@@ -40,7 +40,7 @@
 ### Step 1
 ```sh
 ## 1. clone the repo
-git clone --depth 1 https://github.com/afaqurk/linux-dash.git
+git clone --depth 1 https://github.com/dmit25/linux-dash.git
 
 ## 2. go to the cloned directory
 cd linux-dash/app/server
