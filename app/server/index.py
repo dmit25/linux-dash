@@ -1,11 +1,10 @@
 #!/usr/bin/env python
 
-from __future__ import print_function
 import os
 import sys
-from BaseHTTPServer import BaseHTTPRequestHandler, HTTPServer, test as _test
+from http.server import BaseHTTPRequestHandler, HTTPServer
 import subprocess
-from SocketServer import ThreadingMixIn
+from socketserver import ThreadingMixIn
 import argparse
 
 
@@ -34,7 +33,7 @@ class MainHandler(BaseHTTPRequestHandler):
             else:
                 if self.path == '/':
                     self.path = 'index.html'
-                f = open(appRootPath + os.sep + self.path)
+                f = open(appRootPath + os.sep + self.path, 'rb')
                 data = f.read()
                 if self.path.startswith('/linuxDash.min.css'):
                     contentType = 'text/css'
