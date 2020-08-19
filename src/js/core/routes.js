@@ -59,22 +59,22 @@ function routesFn($routeProvider) {
       ].join(''),
     })
 
-    // .when('/accounts', {
-    //   template: [
-    //     '<server-accounts sortablejs-id="server-accounts"></server-accounts> ',
-    //     '<logged-in-accounts sortablejs-id="logged-in"></logged-in-accounts> ',
-    //     '<recent-logins sortablejs-id="recent"></recent-logins> ',
-    //   ].join(''),
-    // })
+    .when('/accounts', {
+      template: [
+        '<server-accounts sortablejs-id="server-accounts"></server-accounts> ',
+        '<logged-in-accounts sortablejs-id="logged-in"></logged-in-accounts> ',
+        '<recent-logins sortablejs-id="recent"></recent-logins> ',
+      ].join(''),
+    })
 
-    // .when('/apps', {
-    //   template: [
-    //     '<common-applications sortablejs-id="common-applications"></common-applications>',
-    //     '<memcached sortablejs-id="memcached"></memcached>',
-    //     '<redis sortablejs-id="redis"></redis>',
-    //     '<pm2 sortablejs-id="pm2"></pm2>',
-    //   ].join(''),
-    // })
+    .when('/apps', {
+      template: [
+        '<common-applications sortablejs-id="common-applications"></common-applications>',
+        '<memcached sortablejs-id="memcached"></memcached>',
+        '<redis sortablejs-id="redis"></redis>',
+        '<pm2 sortablejs-id="pm2"></pm2>',
+      ].join(''),
+    })
 
     .otherwise({
       redirectTo: '/loading'
