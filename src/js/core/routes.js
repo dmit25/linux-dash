@@ -23,15 +23,17 @@ function routesFn($routeProvider) {
 
     .when('/system-status', {
       template: [
-        '<ram-chart sortablejs-id="ram-chart"></ram-chart> ',
-        '<cpu-avg-load-chart sortablejs-id="cpu-avg-load-chart"></cpu-avg-load-chart> ',
-        '<cpu-utilization-chart sortablejs-id="cpu-util-chart"></cpu-utilization-chart> ',
+        '<gpu-info sortablejs-id="gpu-info"></gpu-info>',
+        '<gpu-temp sortablejs-id="cpu-temp"></gpu-temp> ',
+        '<gpu-ram-chart sortablejs-id="gpu-ram-chart"></gpu-ram-chart> ',
+        '<gpu-fan-speed-chart sortablejs-id="gpu-fan-speed-chart"></gpu-fan-speed-chart> ',
         '<cpu-multi-temp-chart sortablejs-id="cpu-multi-temp-chart"></cpu-multi-temp-chart> ',
+        '<cpu-avg-load-chart sortablejs-id="cpu-avg-load-chart"></cpu-avg-load-chart> ',
+        '<ram-chart sortablejs-id="ram-chart"></ram-chart> ',
+        '<cpu-utilization-chart sortablejs-id="cpu-util-chart"></cpu-utilization-chart> ',
         '<ram-intensive-processes sortablejs-id="ram-intensive-processes"></ram-intensive-processes> ',
         '<cpu-intensive-processes sortablejs-id="cpu-intensive-processes"></cpu-intensive-processes> ',
         '<disk-space sortablejs-id="disk-space"></disk-space> ',
-        '<swap-usage sortablejs-id="swap-usage"></swap-usage> ',
-        '<docker-processes sortablejs-id="docker"></docker-processes> ',
       ].join(''),
     })
 
@@ -72,16 +74,6 @@ function routesFn($routeProvider) {
         '<memcached sortablejs-id="memcached"></memcached>',
         '<redis sortablejs-id="redis"></redis>',
         '<pm2 sortablejs-id="pm2"></pm2>',
-      ].join(''),
-    })
-
-
-    .when('/gpu', {
-      template: [
-        '<gpu-info sortablejs-id="gpu-info"></gpu-info>',
-        '<gpu-temp sortablejs-id="cpu-temp"></gpu-temp> ',
-        '<gpu-ram-chart sortablejs-id="gpu-ram-chart"></gpu-ram-chart> ',
-        '<gpu-fan-speed-chart sortablejs-id="gpu-fan-speed-chart"></gpu-fan-speed-chart> ',
       ].join(''),
     })
 
