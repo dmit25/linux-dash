@@ -76,6 +76,11 @@ function routesFn($routeProvider) {
       ].join(''),
     })
 
+    .when('/gpu', {
+      template: [
+      ].join(''),
+    })
+
     .otherwise({
       redirectTo: '/loading'
     })
