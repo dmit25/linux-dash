@@ -26,7 +26,7 @@ angular.module('linuxDash').directive('cpuTemp', ['server', function(server) {
       }
 
       scope.utilMetrics = [{
-        name: 'Temprature',
+        name: 'CPU Temp',
         generate: function (serverResponseData) {
           return serverResponseData + ' °C'
         }

@@ -5,7 +5,7 @@ angular.module('linuxDash').directive('gpuFanSpeedChart', ['server', function(se
     template: ' \
       <line-chart-plugin \
  \
-          heading="Fan Speed" \
+          heading="GPU Fan Speed" \
           module-name="gpu_fan_speed" \
           color="0,255,0" \
  \
