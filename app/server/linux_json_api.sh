@@ -703,6 +703,14 @@ gpu_fan_speed() {
   $ECHO $result | _parseAndPrint
 }
 
+gpu_util() {
+  result=$($NVSMI --query-gpu=utilization.gpu --format=csv \
+          | tail -n 1 \
+          | cut -d' ' -f1 \
+          )
+  $ECHO $result | _parseAndPrint
+}
+
 
 fnCalled="$1"
 

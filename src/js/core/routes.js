@@ -23,14 +23,13 @@ function routesFn($routeProvider) {
 
     .when('/system-status', {
       template: [
-        '<gpu-info sortablejs-id="gpu-info"></gpu-info>',
-        '<gpu-temp sortablejs-id="cpu-temp"></gpu-temp> ',
-        '<gpu-ram-chart sortablejs-id="gpu-ram-chart"></gpu-ram-chart> ',
-        '<gpu-fan-speed-chart sortablejs-id="gpu-fan-speed-chart"></gpu-fan-speed-chart> ',
-        '<cpu-multi-temp-chart sortablejs-id="cpu-multi-temp-chart"></cpu-multi-temp-chart> ',
-        '<cpu-avg-load-chart sortablejs-id="cpu-avg-load-chart"></cpu-avg-load-chart> ',
-        '<ram-chart sortablejs-id="ram-chart"></ram-chart> ',
         '<cpu-utilization-chart sortablejs-id="cpu-util-chart"></cpu-utilization-chart> ',
+        '<gpu-util-chart sortablejs-id="gpu-util-chart"></gpu-util-chart> ',
+        '<gpu-temp sortablejs-id="cpu-temp"></gpu-temp> ',
+        '<cpu-temp sortablejs-id="cpu-temp"></cpu-temp> ',
+        '<gpu-fan-speed-chart sortablejs-id="gpu-fan-speed-chart"></gpu-fan-speed-chart> ',
+        '<gpu-ram-chart sortablejs-id="gpu-ram-chart"></gpu-ram-chart> ',
+        '<ram-chart sortablejs-id="ram-chart"></ram-chart> ',
         '<ram-intensive-processes sortablejs-id="ram-intensive-processes"></ram-intensive-processes> ',
         '<cpu-intensive-processes sortablejs-id="cpu-intensive-processes"></cpu-intensive-processes> ',
         '<disk-space sortablejs-id="disk-space"></disk-space> ',
