@@ -20,10 +20,7 @@ angular.module('linuxDash').directive('navBar', ['$location', function($location
       scope.items = [
         'system-status',
         'basic-info',
-        'network',
-        'accounts',
-        'apps',
-	'gpu'
+        'network'
       ]
 
       scope.getNavItemName = function(url) {
