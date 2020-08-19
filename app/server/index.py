@@ -9,7 +9,7 @@ import argparse
 
 
 parser = argparse.ArgumentParser(description='Simple Threaded HTTP server to run linux-dash.')
-parser.add_argument('--port', metavar='PORT', type=int, nargs='?', default=80,
+parser.add_argument('--port', metavar='PORT', type=int, nargs='?', default=82,
                     help='Port to run the server on.')
 
 modulesSubPath = '/server/linux_json_api.sh'
