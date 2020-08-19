@@ -102,7 +102,7 @@ cpu_temp() {
         #intel
         elif [[ "${returnString/"core"}" != "${returnString}" ]] ; then
           fromcore=${returnString##*"coretemp"}
-          $ECHO ${fromcore##*Physical}  | $CUT -d ' ' -f 3 #| $CUT -c 2-5 #| _parseAndPrint
+          $ECHO ${fromcore##*Physical}  | $CUT -d ' ' -f 3 | $CUT -c 2-5 | _parseAndPrint
         fi
       else
         $ECHO "[]" | _parseAndPrint
