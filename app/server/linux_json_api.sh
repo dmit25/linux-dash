@@ -86,29 +86,20 @@ cpu_intensive_processes() {
 }
 
 cpu_temp() {
-  local ID=*
-  [ -f /etc/os-release  ] && source /etc/os-release
-  case "$ID" in
-    "raspbian")
-      cpu=$(</sys/class/thermal/thermal_zone0/temp)
-      echo "$((cpu/1000))" | _parseAndPrint
-    ;;
-    *)
-      if type -P sensors 2>/dev/null; then
-        returnString=`sensors`
-        #amd
-        if [[ "${returnString/"k10"}" != "${returnString}" ]] ; then
-          $ECHO ${returnString##*k10} | $CUT -d ' ' -f 6 | $CUT -c 2- | $CUT -c 1-4
-        #intel
-        elif [[ "${returnString/"core"}" != "${returnString}" ]] ; then
-          fromcore=${returnString##*"coretemp"}
-          $ECHO ${fromcore##*Physical}  | $CUT -d ' ' -f 3 | $CUT -c 2-5 | _parseAndPrint
-        fi
-      else
-        $ECHO "[]" | _parseAndPrint
-      fi
-    ;;
-  esac
+
+  if type -P sensors 2>/dev/null; then
+    returnString=`sensors`
+    #amd
+    if [[ "${returnString/"k10"}" != "${returnString}" ]] ; then
+      $ECHO ${returnString##*k10} | $CUT -d ' ' -f 6 | $CUT -c 2- | $CUT -c 1-4
+    #intel
+    elif [[ "${returnString/"core"}" != "${returnString}" ]] ; then
+      fromcore=${returnString##*"coretemp"}
+      $ECHO ${fromcore##*Physical}  | $CUT -d ' ' -f 3 | $CUT -c 2-5 | _parseAndPrint
+    fi
+  else
+    $ECHO "[]" | _parseAndPrint
+  fi
 }
 
 # Explore sensors -u -j flags for easy output processs
