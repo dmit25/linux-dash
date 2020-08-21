@@ -22,7 +22,7 @@ table th{
 
 table td {
   border-bottom: 1px solid #f1f1f1;
-  font-family: Arial, sans-serif;
+  font-family: 'JetBrains Mono', Arial, sans-serif;
   font-size: 10px;
   color: rgba(0,0,0,.65);
 }

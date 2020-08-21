@@ -11,9 +11,7 @@ angular.module('linuxDash').directive('navBar', ['$location', function($location
       </ul> \
       <span class="right-content">\
         Resources:\
-        <a target="_blank" href="https://github.com/afaqurk/linux-dash">GitHub</a> | \
-        <a target="_blank" href="https://gitter.im/afaqurk/linux-dash">Gitter Chat Room</a> | \
-        <a target="_blank" href="https://github.com/afaqurk/linux-dash/wiki">Docs</a> \
+        <a target="_blank" href="https://github.com/dmit25/linux-dash">GitHub</a> | \
       </span>\
     ',
     link: function(scope) {

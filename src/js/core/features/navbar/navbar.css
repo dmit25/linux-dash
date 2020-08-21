@@ -27,11 +27,11 @@ nav-bar ul li a:hover {
 }
 
 nav-bar ul li.active {
-  border-bottom: 2px solid #009587;
+  border-bottom: 2px solid #008585;
 }
 
 nav-bar ul li.active a {
-  color: #009587;
+  color: #008585;
 }
 
 nav-bar ul li {
@@ -42,7 +42,7 @@ nav-bar ul li {
 }
 
 nav-bar .title {
-  color: #009587;
+  color: #008585;
   font-weight: 300;
   font-size: 20px;
   letter-spacing: .1rem;

@@ -6,7 +6,7 @@
   "bin": "bin/linux-dash",
   "repository": {
     "type": "git",
-    "url": "https://github.com/afaqurk/linux-dash.git"
+    "url": "https://github.com/dmit25/linux-dash.git"
   },
   "keywords": [
     "linux",
@@ -15,15 +15,14 @@
     "monitor",
     "server"
   ],
-  "author": "Afaq Tariq",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/afaqurk/linux-dash/issues"
+    "url": "https://github.com/dmit25/linux-dash/issues"
   },
   "scripts": {
     "start": "gulp"
   },
-  "homepage": "https://github.com/afaqurk/linux-dash",
+  "homepage": "https://github.com/dmit25/linux-dash",
   "dependencies": {
     "express": "^4.11.1",
     "websocket": "^1.0.23",
